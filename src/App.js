@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./usestate/Counter";
+import Products from "./useffect/Products";
 
 function App() {
   return (
     <React.Fragment>
-      <Counter />
+      <Products />
     </React.Fragment>
   )
 }
