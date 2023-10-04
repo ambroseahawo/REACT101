@@ -1,28 +1,29 @@
 import React from "react";
+import "./style.css"
 
 const Products = () => {
   return (
-    <React.Fragment>
-      <div class="ui fixed menu">
-        <div class="ui container center">
+    <div className="App">
+      <div className="ui fixed menu">
+        <div className="ui container center">
           <h2>FakeShop</h2>
         </div>
       </div>
-      <div class="four wide column">
-        <div class="ui link cards">
-          <div class="card">
-            <div class="image">
+      <div className="four wide column">
+        <div className="ui link cards">
+          <div className="card">
+            <div className="image">
               <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
             </div>
-            <div class="content">
-              <div class="header">HEADER</div>
-              <div class="meta price">90</div>
-              <div class="meta">CATEGORY</div>
+            <div className="content">
+              <div className="header">HEADER</div>
+              <div className="meta price">90</div>
+              <div className="meta">CATEGORY</div>
             </div>
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 
