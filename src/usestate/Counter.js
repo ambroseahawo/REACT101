@@ -16,6 +16,8 @@ const Counter = () => {
     }
   }
 
+  const handleReset = () => setNumber(0)
+
   return (
     <div className="container">
       <h2>React Example 1 - Counter</h2>
@@ -24,7 +26,7 @@ const Counter = () => {
         <div className="buttons">
           <button onClick={handleIncrease}>Increase</button>
           <button onClick={handleDecrease}>Decrease</button>
-          <button>Reset</button>
+          <button onClick={handleReset}>Reset</button>
         </div>
       </div>
     </div>
