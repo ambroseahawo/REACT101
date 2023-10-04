@@ -1,7 +1,9 @@
-import React from "react";
-import "./style.css"
+import React, { useState } from "react";
+import "./style.css";
 
 const Products = () => {
+  const [products, setProducts] = useState([])
+  
   return (
     <div className="App">
       <div className="ui fixed menu">
