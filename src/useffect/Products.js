@@ -2,8 +2,10 @@ import React from "react";
 
 const Products = () => {
   return(
-    <div>
-      <h1>Products</h1>
+    <div class="ui fixed menu">
+      <div class="ui container center">
+        <h2>FakeShop</h2>
+      </div>
     </div>
   )
 }
