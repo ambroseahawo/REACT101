@@ -8,6 +8,10 @@ const Counter = () => {
     setNumber(number + 1)
   }
 
+  const handleDecrease = () => {
+    setNumber(number - 1)
+  }
+
   return (
     <div className="container">
       <h2>React Example 1 - Counter</h2>
@@ -15,7 +19,7 @@ const Counter = () => {
         <h1>{number}</h1>
         <div className="buttons">
           <button onClick={handleIncrease}>Increase</button>
-          <button>Decrease</button>
+          <button onClick={handleDecrease}>Decrease</button>
           <button>Reset</button>
         </div>
       </div>
