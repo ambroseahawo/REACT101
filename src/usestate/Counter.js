@@ -9,7 +9,11 @@ const Counter = () => {
   }
 
   const handleDecrease = () => {
-    setNumber(number - 1)
+    if (number < 1){
+      setNumber(0)
+    } else{
+      setNumber(number - 1)
+    }
   }
 
   return (
