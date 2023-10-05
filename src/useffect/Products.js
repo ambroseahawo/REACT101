@@ -3,12 +3,12 @@ import "./style.css";
 
 const Products = () => {
   const [products, setProducts] = useState([])
-  
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
-    .then(response => response.json())
-    .then(data => setProducts(data))
-    .catch(error => console.log(error))
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.log(error))
   })
 
   return (
@@ -19,20 +19,28 @@ const Products = () => {
         </div>
       </div>
       <div className="ui grid container">
-        <div className="four wide column">
-          <div className="ui link cards">
-            <div className="card">
-              <div className="image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
+        {products.length === 0 ? (
+          <div>Loading...</div>
+        ) : (
+          products.map(item => {
+            return (
+              <div className="four wide column" key={item.id}>
+                <div className="ui link cards">
+                  <div className="card">
+                    <div className="image">
+                      <img src={item.image} alt={item.title} />
+                    </div>
+                    <div className="content">
+                      <div className="header">{item.title}</div>
+                      <div className="meta price">$ {item.price}</div>
+                      <div className="meta">{item.category}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="content">
-                <div className="header">HEADER</div>
-                <div className="meta price">90</div>
-                <div className="meta">CATEGORY</div>
-              </div>
-            </div>
-          </div>
-        </div>
+            )
+          })
+        )}
       </div>
     </div>
   )
