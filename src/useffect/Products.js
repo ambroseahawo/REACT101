@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./style.css";
 
 const Products = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.log(error))
+    // fetch("https://fakestoreapi.com/products")
+    //   .then(response => response.json())
+    //   .then(data => setProducts(data))
+    //   .catch(error => console.log(error))
+    axios.get("https://fakestoreapi.com/products").then(response => {
+      setProducts(response.data)
+    }).catch(error => console.log(error))
   },[])
 
   return (
