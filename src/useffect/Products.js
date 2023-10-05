@@ -9,7 +9,7 @@ const Products = () => {
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error))
-  })
+  },[])
 
   return (
     <div className="App">
